@@ -1,0 +1,106 @@
+html {
+  height: 100%;
+}
+html body {
+  display: grid;
+  grid-template-rows: 100px auto 1fr 100px;
+  grid-template-columns: minmax(150px, 1fr) 5fr minmax(150px, 1fr);
+  grid-template-areas: "HD HD HD HD" "FL BR BR BR" "FL PR PR BN" "FT FT FT FT ";
+  min-height: 100vh;
+}
+html body > header,
+html body > footer {
+  height: 100px;
+  background-color: beige;
+}
+html body header {
+  grid-area: HD;
+}
+html body footer {
+  grid-area: FT;
+}
+html body aside {
+  padding: 10px;
+  background-color: aqua;
+  grid-area: FL;
+}
+html body nav {
+  padding: 10px;
+  background-color: blue;
+  grid-area: BR;
+}
+html body aside.banner {
+  width: 150px;
+  grid-area: BN;
+}
+html body section {
+  padding: 10px;
+  flex: 1;
+  background-color: yellow;
+  grid-area: PR;
+}
+html body section h2 {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+html body section p {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+html body section > div {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  gap: 10px;
+}
+html body section > div article {
+  aspect-ratio: 1.33333333;
+  border-radius: 5px;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: orange;
+  gap: 10px;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 3fr 1fr 1fr;
+}
+html body section > div article img {
+  align-self: stretch;
+  display: block;
+  flex: 40;
+  width: 100%;
+  object-fit: contain;
+  background-color: white;
+  grid-column: 1/2;
+  grid-row: 1/-1;
+}
+html body section > div article main {
+  padding: 10px;
+  flex: 60;
+  display: contents;
+}
+html body section > div article main header {
+  font-weight: bold;
+  font-size: 1.1em;
+  text-align: center;
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+html body section > div article main .rating {
+  text-align: center;
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+html body section > div article main .rating:after {
+  content: "★";
+  color: yellow;
+}
+html body section > div article main .price {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.1em;
+  color: red;
+  grid-column: 2/3;
+  grid-row: 3/4;
+}

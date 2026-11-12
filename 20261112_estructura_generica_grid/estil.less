@@ -1,0 +1,135 @@
+
+html {
+         height:100%;
+
+         body {
+
+            display:grid;
+            
+            grid-template-rows: 100px auto 1fr 100px;
+            grid-template-columns: minmax(150px,1fr) 5fr minmax(150px,1fr);
+            grid-template-areas: 
+                "HD HD HD HD"
+                "FL BR BR BR"
+                "FL PR PR BN"
+                "FT FT FT FT ";
+
+
+            min-height: 100vh;
+
+            > header, > footer {
+               height:100px;
+               background-color: beige;   
+               
+            }
+
+            header{
+                grid-area: HD;
+            }
+
+            footer {
+                grid-area: FT;
+            }
+
+ 
+            aside {
+                padding:10px;
+                background-color: aqua;
+                grid-area: FL;
+            }
+
+
+            nav {
+                padding:10px;
+                background-color: blue;
+                grid-area: BR;
+            }
+            
+                aside.banner{
+                    width:150px;
+                    grid-area: BN;
+                }
+                section{
+                    padding:10px;
+                    flex:1;
+                    background-color: yellow;
+                    @COLS:4;
+                    @GAP: 10px;
+                    grid-area: PR;
+                    h2 {
+                        font-weight: bold;
+                        font-size: 1.5em;
+                    }
+
+                    p {
+                        margin-top: 20px;
+                        margin-bottom: 20px;
+                    }
+
+                    > div {
+                        display: grid;
+                        grid-template-columns: repeat(@COLS, 1fr);  
+                        grid-template-rows: auto;
+
+                        gap: @GAP;
+                        article{
+                            aspect-ratio: 4/3; //!!!!
+                            border-radius:5px;
+                            padding: 10px;
+                            box-sizing: border-box;
+                            background-color: orange;
+                            gap:10px;
+                            display: grid;
+                            align-items: center;
+                            grid-template-columns: 1fr 1fr;
+                            grid-template-rows: 3fr 1fr 1fr;
+
+                            img {
+                                align-self: stretch;
+                                display: block;
+                                flex:40;
+                                width: 100%;
+                                object-fit: contain;
+                                background-color: white;
+                                grid-column: ~"1/2";
+                                grid-row:  ~"1/-1";
+                            }
+
+                            main {
+                                padding: 10px;
+                                flex:60;
+                                display: contents;
+
+                                header {
+                                    font-weight: bold;
+                                    font-size: 1.1em;                                    
+                                    text-align: center;
+                                    grid-column: ~"2/3";
+                                    grid-row: ~"1/2";
+                                }
+                                .rating {
+                                    text-align: center;
+                                    grid-column: ~"2/3";
+                                    grid-row: ~"2/3";
+                                    &:after {
+                                        content:"★";
+                                        color:yellow;
+                                    }
+                                }
+                                .price {
+                                    text-align: center;
+                                    font-weight: bold;
+                                    font-size: 1.1em;
+                                    color:red;
+                                    grid-column:  ~"2/3";
+                                    grid-row: ~"3/4";
+                                }
+                            }
+                        
+                        
+                        }
+                    }
+                }                          
+         }
+}
+  
