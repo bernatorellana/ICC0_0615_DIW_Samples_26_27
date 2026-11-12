@@ -1,0 +1,12 @@
+html {
+  height: 100%;
+  background-image: url(images/landscape.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+html main {
+  margin: 20px;
+  background-color: #23ff43;
+  padding: 20px;
+}

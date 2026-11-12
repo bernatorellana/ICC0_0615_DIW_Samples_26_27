@@ -1,0 +1,79 @@
+html {
+  height: 100%;
+  font-size: 16px;
+  background-color: lime;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+html .capsa ul li {
+  background-color: red;
+  border: 1px solid black;
+  margin: 3px;
+  padding: 10px;
+}
+html .capsa ul li:nth-child(3n) {
+  background-color: rgba(230, 218, 242, 0.884);
+}
+html .capsa ul li:nth-child(3n+1) {
+  background-color: #d5b1f6;
+}
+html .capsa ul li:nth-child(3n+2) {
+  background-color: blueviolet;
+}
+html .capsa ul li:hover {
+  background-color: aqua;
+}
+html .capsa article {
+  /*p:nth-child(2n+1){
+                background-color: aqua;                                
+            }*/
+}
+html .capsa article p:nth-of-type(2n+1) {
+  background-color: red;
+}
+html .capsa #exempleAfterBefore p:after {
+  content: "★";
+  color: green;
+}
+html .capsa #exempleAfterBefore p:before {
+  content: "★";
+  font-size: 20px;
+}
+html .capsa .etiqueta {
+  background-color: rgba(245, 245, 220, 0.852);
+  padding: 30px;
+  margin: 20px;
+  position: relative;
+}
+html .capsa .etiqueta:after {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 0px;
+  border: 15px solid transparent;
+  border-bottom-color: orange;
+  border-right-color: orange;
+  border-top-color: white;
+  border-left-color: white;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  box-shadow: 9px 11px 20px 5px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 9px 11px 20px 5px rgba(0, 0, 0, 0.5);
+}
+html .contentbox,
+html .borderbox {
+  font-size: 150%;
+  box-sizing: content-box;
+  width: 50%;
+  border: 1px solid red;
+  padding: 10px;
+}
+html .borderbox {
+  box-sizing: border-box;
+}
+html .flexbox {
+  width: 50%;
+  font-size: 150%;
+  font-size: 1.5em;
+  font-size: 1.5rem;
+}

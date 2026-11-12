@@ -1,0 +1,45 @@
+html {
+  height: 100%;
+}
+html ul {
+  display: flex;
+  justify-content: space-evenly;
+  height: 150px;
+  align-items: center;
+}
+html ul li {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid gray;
+  order: 1;
+}
+html ul li.selected {
+  order: 0;
+  flex-grow: unset;
+  flex-shrink: 3;
+}
+html ul li:hover {
+  background-color: aqua;
+}
+html .capsa {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  flex-direction: row;
+  height: 1000px;
+  background-color: yellow;
+  align-content: center;
+  justify-content: center;
+}
+html .capsa article {
+  width: 23.33333333%;
+  padding: 10px;
+  border: 1px solid black;
+  box-sizing: border-box;
+}
+html .capsa article:nth-child(1) {
+  background-color: lime;
+}
+html .capsa article:nth-child(2) {
+  background-color: orange;
+}

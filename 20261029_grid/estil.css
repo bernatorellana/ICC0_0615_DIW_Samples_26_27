@@ -1,0 +1,15 @@
+.capsa {
+  display: grid;
+  gap: 10px;
+  padding: 10px;
+  grid-template-columns: 200px 1fr 200px;
+  grid-template-rows: 150px 1fr 150px;
+  background-color: yellow;
+  height: 100vh;
+}
+.capsa div {
+  width: 100%;
+  height: 100%;
+  background-color: red;
+  border: 1px solid black;
+}

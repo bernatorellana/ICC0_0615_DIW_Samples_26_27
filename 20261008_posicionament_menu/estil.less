@@ -1,0 +1,68 @@
+
+html {
+         height:100%;
+
+    main{
+
+        nav {
+            position:fixed;
+            top:0px;
+            left: 0px;
+            background-color: aqua;
+            width: 100%;
+            >ul{
+
+                > li{
+                    position: relative;
+                    width: 300px;
+                    >p {
+                        position:absolute;
+                        top:0px;
+                        left:0px;
+                        height: 100%;
+                        width: 300px;
+                        z-index:100;
+                        display: flex;                        
+                        align-items: center;
+                    }                    
+                }
+
+                display: flex;   
+                ul {
+                    z-index: 10;
+                    transition: 0.5s all;
+                    //overflow: hidden;
+                    //display: none;
+                    transform:translateY(-100%);
+                    position:absolute;
+                    left:0px;
+                    top:0%;
+                    width: 100%;
+                    li {
+                        background-color: aquamarine;
+                    }
+                }             
+            }
+            li{
+                padding:20px;
+                position:relative;
+                
+                &:hover {
+                    >p {
+                    background-color: red;
+
+                    }
+                    
+                    ul {
+                        //display: block;
+                       top:100%;
+                       transform:translateY(0%);
+                       
+                    }
+                }
+            }
+        }
+    }
+
+}
+    

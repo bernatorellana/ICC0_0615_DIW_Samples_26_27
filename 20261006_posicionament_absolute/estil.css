@@ -1,0 +1,23 @@
+html {
+  height: 100%;
+}
+html aside {
+  background-color: red;
+  height: 700px;
+  width: 50%;
+}
+html main {
+  position: relative;
+}
+html div {
+  background-color: green;
+  height: 600px;
+  width: 50%;
+}
+html footer {
+  background-color: orange;
+  height: 80px;
+}
+html section {
+  display: flex;
+}

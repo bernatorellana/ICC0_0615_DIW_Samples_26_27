@@ -1,0 +1,50 @@
+html {
+  height: 100%;
+}
+html main nav {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background-color: aqua;
+  width: 100%;
+}
+html main nav > ul {
+  display: flex;
+}
+html main nav > ul > li {
+  position: relative;
+  width: 300px;
+}
+html main nav > ul > li > p {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 300px;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+}
+html main nav > ul ul {
+  z-index: 10;
+  transition: 0.5s all;
+  transform: translateY(-100%);
+  position: absolute;
+  left: 0px;
+  top: 0%;
+  width: 100%;
+}
+html main nav > ul ul li {
+  background-color: aquamarine;
+}
+html main nav li {
+  padding: 20px;
+  position: relative;
+}
+html main nav li:hover > p {
+  background-color: red;
+}
+html main nav li:hover ul {
+  top: 100%;
+  transform: translateY(0%);
+}

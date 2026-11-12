@@ -1,0 +1,36 @@
+
+html {
+         height:100%;
+
+    main{
+
+        .A,.B, .InsideA {
+            display: block;
+            width: 300px;
+            height: 300px;
+            opacity: 0.9;
+            position: absolute;
+            top:0px;
+            left:50%;
+        }
+        .A{
+            background-color: red;
+            z-index:2;
+            overflow: hidden;
+        }
+        .B{
+            background-color: green;
+            left:55%;
+            z-index:1;
+        }
+        .InsideA {
+            background-color: yellow;
+            z-index:1;
+            left:55%;
+            top:50%;
+
+        }
+    }
+
+}
+    

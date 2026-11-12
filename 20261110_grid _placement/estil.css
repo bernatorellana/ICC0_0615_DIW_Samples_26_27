@@ -1,0 +1,29 @@
+.capsa {
+  display: grid;
+  gap: 10px;
+  padding: 10px;
+  grid-template-columns: 200px 1fr 200px;
+  grid-template-rows: 150px 1fr 1fr 150px;
+  background-color: white;
+  height: 100vh;
+}
+.capsa div {
+  width: 100%;
+  height: 100%;
+  border: 1px solid black;
+}
+.capsa .verd {
+  background-color: green;
+  grid-row: 1 / -1;
+  grid-column: 1 / 2;
+}
+.capsa .vermell {
+  background-color: red;
+  grid-row: 3 / 4;
+  grid-column: 3 / 4;
+}
+.capsa .groc {
+  background-color: yellow;
+  grid-column: 2 / 4;
+  grid-row: 2 / 3;
+}
